@@ -7,10 +7,20 @@ You can create ripple animated pages with swipeable_button_view.
 
 ## Install
 
-Add `swipeable_button_view` as a dependency in pubspec.yaml
-For help on adding as a dependency, view the [documentation](https://flutter.io/using-packages/).
+Add `swipeable_button_view:` to your `pubspec.yaml` dependencies then run `flutter pub get`
 
-## Usage
+```yaml
+dependencies:
+  swipeable_button_view:
+```
+
+Then import the package to use
+
+```dart
+import 'package:swipeable_button_view/swipeable_button_view.dart';
+```
+
+## Example
 
 ```dart
 import 'package:swipeable_button_view/swipeable_button_view.dart';
@@ -46,7 +56,7 @@ SwipeableButtonView(
 
 ## Screen Recording
 
-![image]<img src="https://raw.githubusercontent.com/cmrnrbs/swipeable_button_view/master/docs/record.gif"  width="400" height="866">
+<img src="https://raw.githubusercontent.com/cmrnrbs/swipeable_button_view/master/docs/record.gif"  width="400" height="866">
 
 ## Props
 
