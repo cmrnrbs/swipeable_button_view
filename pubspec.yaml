@@ -1,7 +1,8 @@
 name: swipeable_button_view
-description: A new Flutter package project.
+description: You can create ripple animated pages with swipeable_button_view.
 version: 0.0.1
-homepage: null
+author: Cemre Onur Baş<cemreonurb@gmail.com>
+homepage: https://github.com/cmrnrbs/swipeable_button_view
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
