@@ -1,7 +1,7 @@
 # swipeable_button_view
 
 [![Pub Version](https://img.shields.io/pub/v/swipeable_button_view.svg?style=flat-square)](https://pub.dartlang.org/packages/swipeable_button_view)
-[![Flutter CI](https://github.com/dooboolab/swipeable_button_view/actions/workflows/ci.yml/badge.svg)](https://github.com/dooboolab/swipeable_button_view/actions/workflows/ci.yml)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 You can create ripple animated pages with swipeable_button_view.
 
