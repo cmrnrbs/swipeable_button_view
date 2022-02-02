@@ -56,7 +56,7 @@ SwipeableButtonView(
 
 ## Screen Recording
 
-<img src="https://raw.githubusercontent.com/cmrnrbs/swipeable_button_view/master/docs/record.gif"  width="400" height="866">
+<img src="https://raw.githubusercontent.com/cmrnrbs/swipeable_button_view/master/doc/record.gif"  width="400" height="866">
 
 ## Props
 
