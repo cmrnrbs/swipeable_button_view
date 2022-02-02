@@ -1,6 +1,6 @@
 # swipeable_button_view
 
-[![Pub Version](https://img.shields.io/pub/v/swipeable_button_view.svg?style=flat-square)](https://pub.dartlang.org/packages/swipeable_button_view)
+[![Pub Version](https://img.shields.io/pub/v/swipeable_button_view?color=%23007EC6&style=flat-square)](https://pub.dartlang.org/packages/swipeable_button_view)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 You can create ripple animated pages with swipeable_button_view.
