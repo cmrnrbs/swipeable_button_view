@@ -1,39 +1,65 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# swipeable_button_view
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+[![Pub Version](https://img.shields.io/pub/v/swipeable_button_view.svg?style=flat-square)](https://pub.dartlang.org/packages/swipeable_button_view)
+[![Flutter CI](https://github.com/dooboolab/swipeable_button_view/actions/workflows/ci.yml/badge.svg)](https://github.com/dooboolab/swipeable_button_view/actions/workflows/ci.yml)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+You can create ripple animated pages with swipeable_button_view.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Install
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add `swipeable_button_view` as a dependency in pubspec.yaml
+For help on adding as a dependency, view the [documentation](https://flutter.io/using-packages/).
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:swipeable_button_view/swipeable_button_view.dart';
+
+SwipeableButtonView(
+    buttonText: 'SLIDE TO PAYMENT',
+    buttonWidget: Container(
+        child: Icon(Icons.arrow_forward_ios_rounded,
+            color: Colors.grey,
+                ),),
+    activeColor: Color(0xFF009C41),
+    isFinished: isFinished,
+    onWaitingProcess: () {
+    Future.delayed(Duration(seconds: 2), () {
+            setState(() {
+                isFinished = true;
+                      });
+                    });
+                  },
+    onFinish: () async {
+        await Navigator.push(context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: DashboardScreen()));
+
+                    //TODO: For reverse ripple effect animation
+                    setState(() {
+                      isFinished = false;
+                    });
+                  },
+)
 ```
 
-## Additional information
+## Screen Recording
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+![image](https://raw.githubusercontent.com/cmrnrbs/swipeable_button_view/master/docs/record.gif)
+
+## Props
+
+|      props       |        types        |                         defaultValues                         | isRequired |
+| :--------------: | :-----------------: | :-----------------------------------------------------------: | :--------: |
+|     onFinish     |   `VoidCallback`    |                                                               |   `true`   |
+| onWaitingProcess |   `VoidCallback`    |                                                               |   `true`   |
+|   activeColor    |       `Color`       |                                                               |   `true`   |
+|   buttonWidget   |      `Widget`       |                                                               |   `true`   |
+|    buttonText    |      `String`       |                                                               |   `true`   |
+|    isFinished    |       `bool`        |                            `false`                            |            |
+|     isActive     |       `bool`        |                            `true`                             |            |
+|   disableColor   |       `Color`       |                         `Colors.grey`                         |            |
+|   buttonColor    |       `Color`       |                        `Colors.white`                         |            |
+| buttontextstyle  |     `TextStyle`     | `TextStyle(color: Colors.white, fontWeight: FontWeight.bold)` |            |
+|  indicatorColor  | `Animation<Color?>` |        `AlwaysStoppedAnimation<Color>(Colors.white)})`        |            |

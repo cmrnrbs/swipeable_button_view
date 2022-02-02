@@ -133,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             type: PageTransitionType.fade,
                             child: DashboardScreen()));
 
+                    //TODO: For reverse ripple effect animation
                     setState(() {
                       isFinished = false;
                     });
